@@ -8,14 +8,20 @@
 public class Main {
 
     
-    static private int N = 200;    // order
     
     public static void main(String[] args) {
         
+        int N = 10;   
         Euler461 e = new Euler461(N);
+        e.solve1();
         
-        e.solve();
         
+        /*
+        * You will need the part below ONLY for when you need to calculate running times
+        * for multiple values of N
+        */
+        
+        /*
         int[] nVals={10,20,30,40,50,100,200,300,1000,10000};
         int[] tValsMilliseconds=new int[nVals.length]; 
         
@@ -25,7 +31,7 @@ public class Main {
             long start = System.nanoTime();
             int lTimes = 4;
             for (int ll=0; ll<lTimes; ++ll) {
-                eTemp.solve2();
+                eTemp.solve();
             }
             long end = System.nanoTime();
             tValsMilliseconds[ii] = (int) ( (end-start)/lTimes / 1000000 ); // nano - 10^-9 ==> tVals in milli 
@@ -37,5 +43,7 @@ public class Main {
         System.out.println("\nRunning times for different n values:\n");
         for (int ii=0; ii<nVals.length;++ii)
             System.out.format("n=%d \t==>\t t=%d\n", nVals[ii],tValsMilliseconds[ii]);
+
+        */
     }
 }

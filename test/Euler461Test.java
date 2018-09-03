@@ -163,6 +163,7 @@ public class Euler461Test {
     /**
      * Test of solve method, of class Euler461.
      */
+    /*
     @Test
     public void t47_testSolve() {
         System.out.print("solve");
@@ -173,5 +174,5 @@ public class Euler461Test {
         assertEquals(expResult, result);
         System.out.println("\t\t--> Passed successfuly");
     }
-    
+    */
 }
