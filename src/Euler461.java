@@ -36,7 +36,7 @@ public class Euler461 {
     // g(n) = a^2 + b^2 + c^2 + d^2
     public int g(int a, int b, int c, int d) {
         // ToDo
-        return 0;
+        return Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2) + Math.pow(d, 2);
     }
     
     
@@ -47,11 +47,30 @@ public class Euler461 {
     }
     
     public int solve1() {
+        int maxA = (int) Math.ceil(fnkInverse(Math.PI));
         int a=0,b=0,c=0,d=0;
 
         // ToDo
-        
-        
+        double[] vals1 = new double[maxA+1]l
+            for (int ii = 0; ii<maxA; ++ii)
+                vals1[ii] = fn(ii);
+        for (int aa = 0; aa <= maxA; ++ aa) {
+            double valA = vals1[aa];
+            
+            for (int bb = 0; bb <= aa;++bb) {
+                double valB = vals1[bb];
+                
+                for (int cc = 0; cc <= bb ++cc) {
+                    double valC = vals1[cc];
+                    
+                    for (int dd = 0; dd <= cc; ++dd) {
+                        double valD = vals1[dd];
+                        double val = valA + valB + valC + valD;
+                        //ToDo
+                    }
+                }
+            }
+        }
         
         System.out.format(" I -- Solved: n=%d. (a,b,c,d)=(%d,%d,%d,%d). Value of g=%d\n",n,a,b,c,d,g(a,b,c,d));
         return g(a,b,c,d);
